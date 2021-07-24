@@ -1,0 +1,32 @@
+.testimonials {
+
+  padding-top: rem(50px);
+  background: $coLPeach2;
+
+  .carousel-cell {
+
+    width: 25%;
+    min-width: 300px;
+    counter-increment: carousel-cell;
+    margin: 30px 15px;
+    padding-bottom: 50px;
+
+  }
+
+  .progress-bar {
+    height: 20px;
+    width: 0;
+    background: #333;
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    .carousel-cell {
+
+      margin-left: 6;
+      margin-right: 6px;
+    }
+
+  }
+
+}

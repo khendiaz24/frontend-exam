@@ -1,0 +1,49 @@
+.partners {
+
+  .stacks {
+
+    margin-bottom: 0;
+  }
+
+  .waves {
+
+    z-index: -1;
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    .stacks {
+
+      .grid-item {
+
+        &.md {
+
+          order: 13;
+          margin-top: rem(30px);
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+
+    .stacks {
+
+      .grid-item {
+
+        padding: 0;
+        flex-basis: 100%;
+
+        .images {
+
+          img {
+
+            width: auto;
+            height: 27px;
+          }
+        }
+      }
+    }
+  }
+}

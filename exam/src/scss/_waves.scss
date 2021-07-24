@@ -1,0 +1,18 @@
+.waves {
+  
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  &.top {
+
+    top: -1px;
+    bottom: auto;
+    @include transform(rotate(180deg));
+  }
+
+  &.bottom {
+
+    bottom: 0;
+  }
+}

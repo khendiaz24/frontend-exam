@@ -1,0 +1,94 @@
+// ionclude all your related style here in the footer, you can leave it empty if the page has no footer
+footer { 
+  z-index: 2; 
+  position: relative; 
+
+  .footer {
+
+    background: $coGreen;
+    padding: rem(0 15px 50px);
+
+    &__nav {
+
+      text-align: center;
+      padding-top: rem(50px);
+
+      ul {
+
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+
+        li {
+
+          flex-grow: 1;
+          margin: rem(5px 10px);
+  
+          a {
+  
+            color: $coWhite;
+          }
+  
+        }
+      }
+
+    }
+
+    &__logo {
+
+      max-width: 492px;
+      margin: rem(60px auto 0);
+    }
+
+    &__link {
+
+      margin-top: rem(50px);
+      text-align: center;
+      font-size: rem(16px);
+
+      ul {
+        
+        display: flex;
+        justify-content: center;
+      }
+
+      li {
+
+        margin: rem(5px 15px);
+
+        a {
+          
+          color: $coLGreen;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+
+      &__nav {
+
+        ul {
+
+          flex-direction: column;
+        }
+      }
+
+      &__logo {
+
+        width: 250px;
+        margin-top: rem(30px);
+      }
+
+      &__link {
+
+        margin-top: rem(30px);
+
+        ul {
+
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  
+}

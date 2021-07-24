@@ -1,0 +1,79 @@
+.card {
+
+  position: relative;
+  font-size: rem(16px); 
+  padding: rem(40px);
+  padding-bottom: rem(20px);
+  background: $coLGray;
+  border: none;
+  border-radius: 20px;
+  
+  text-align: center;
+  
+  &:before {
+
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 50px;
+    height: 36px;
+    content: '';
+    background: url('../images/home/quotations.png') no-repeat;
+    background-size: 100%;
+  }
+
+  &:after {
+
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 50px;
+    height: 36px;
+    content: '';
+    background: url('../images/home/quotations.png') no-repeat;
+    background-size: 100%;
+    @include transform(rotateY(180deg));
+  }
+
+  .images {
+
+    margin-top: rem(50px);
+    margin-bottom: rem(30px);
+  }
+
+  h4 {
+
+    font-weight: 600;
+    color: $coGreen;
+    margin-bottom: rem(20px);
+  }
+
+  span {
+
+    display: inline-block;
+    margin-top: rem(20px);
+    font-size: rem(14px);
+    font-weight: 600;
+    color: $coGreen;
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    padding: rem(20px);
+
+    .images {
+
+      max-width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: rem(30px);
+    }
+
+    .icon-img {
+
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+    }
+  }
+}

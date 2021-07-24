@@ -1,0 +1,132 @@
+.hero {
+
+  min-height: 1200px;
+  padding-top: rem(150px);
+  background: $coPeach;
+  background-size: cover;
+  color: $coLBrown;
+  padding-bottom: 22%;
+
+  h1 {
+    
+    color: $coBrown;
+  }
+
+  p {
+
+    margin-top: rem(20px);
+  }
+
+  .btn {
+
+    margin-top: rem(20px);
+    box-shadow: 0 12px 25px rgba($coBlack, .2);
+  }
+
+  .hero-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+
+  }
+  
+  &__content {
+
+    max-width: 650px;
+  }
+
+  
+  .leaves {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    span {
+
+      position: absolute;
+      top: 10%;
+      right: 0;
+      width: 11%;
+      padding-bottom: 33%;
+      background: url('../images/home/leaves2.png') no-repeat;
+      background-size: 100%;
+    }
+
+    &:before {
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 35%;
+      padding-bottom: 27%;
+      content: '';
+      background: url('../images/home/leaves1.png') no-repeat;
+      background-size: 100%;
+    }
+
+    &:after {
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 30%;
+      padding-bottom: 21%;
+      content: '';
+      background: url('../images/home/leaves3.png') no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+
+    min-height: 900px;
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    padding-bottom: 20%;
+
+    .hero-banner {
+
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__graphics {
+
+      order: -1;
+      max-width: 500px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-bottom: rem(30px);
+    }
+
+    .leaves {
+
+      span {
+
+        width: 20%;
+        padding-bottom: 60%;
+      }
+    }
+  }  
+
+  @include media-breakpoint-down(sm) {
+
+    padding-top: rem(130px);
+
+    .leaves {
+
+      span {
+
+        width: 23%;
+        padding-bottom: 69%;
+      }
+    }
+  }
+}

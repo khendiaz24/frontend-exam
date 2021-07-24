@@ -1,0 +1,64 @@
+.how-it-works {
+
+  padding-top: rem(70px);
+  padding-bottom: 22%;
+
+  .container {
+
+    position: relative;
+    z-index: 2;
+  }
+
+  .leaves {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    &:before {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 14%;
+      padding-bottom: 23%;
+      background: url('../images/home/palm-left.png') no-repeat;
+      background-size: 100%;
+    }
+
+    &:after {
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      width: 9.5%;
+      padding-bottom: 34%;
+      background: url('../images/home/palm-right.png') no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    text-align: center;
+
+    .leaves {
+
+      &:before {
+
+        width: 19%;
+        padding-bottom: 32%;
+      }
+
+      &:after {
+
+        width: 13%;
+        padding-bottom: 45%;
+      }
+    }
+  }
+}
